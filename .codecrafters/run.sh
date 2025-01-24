@@ -8,4 +8,6 @@
 
 set -e # Exit on failure
 
+# Remove --frozen-lockfile flag if present
+bun install  # Ensure dependencies are correctly installed
 exec bun run $(dirname $0)/app/main.ts "$@"
